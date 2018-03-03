@@ -68,12 +68,12 @@ namespace WIndowsServiceInstaller
 
         private void btnInstall_Click(object sender, RoutedEventArgs e)
         {
-            InstallService("TestService.exe");
+            InstallService(ThisServiceName);
         }
 
         private void btnUninstall_Click(object sender, RoutedEventArgs e)
         {
-            UninstallService("TestService.exe");
+            UninstallService(ThisServiceName);
         }
 
         //安装服务
