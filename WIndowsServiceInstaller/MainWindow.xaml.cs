@@ -60,6 +60,8 @@ namespace WIndowsServiceInstaller
 
         public static string ThisServiceName { get; set; }
 
+        public static string ThisServiceFileType { get; set; }
+
 
         public MainWindow()
         {
@@ -68,12 +70,12 @@ namespace WIndowsServiceInstaller
 
         private void btnInstall_Click(object sender, RoutedEventArgs e)
         {
-            InstallService(ThisServiceName);
+            InstallService($"{ThisServiceName}.{ThisServiceFileType}");
         }
 
         private void btnUninstall_Click(object sender, RoutedEventArgs e)
         {
-            UninstallService(ThisServiceName);
+            UninstallService($"{ThisServiceName}.{ThisServiceFileType}");
         }
 
         //安装服务
@@ -140,6 +142,7 @@ namespace WIndowsServiceInstaller
                 {
                     var service = (ServiceBase)assembly.CreateInstance(type.FullName);
                     ThisServiceName = service.ServiceName;
+                    ThisServiceFileType = item.Split('.').Last();
                     break;
                 };
             }
