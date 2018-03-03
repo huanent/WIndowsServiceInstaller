@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIndowsServiceInstaller", "WIndowsServiceInstaller\WIndowsServiceInstaller.csproj", "{2C15E98B-4CEF-4264-9905-BEBE90E47648}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestService", "TestService\TestService.csproj", "{E1F116C5-EBF9-4D18-A4BC-4E43A8A42C89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{2C15E98B-4CEF-4264-9905-BEBE90E47648}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C15E98B-4CEF-4264-9905-BEBE90E47648}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C15E98B-4CEF-4264-9905-BEBE90E47648}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F116C5-EBF9-4D18-A4BC-4E43A8A42C89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F116C5-EBF9-4D18-A4BC-4E43A8A42C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F116C5-EBF9-4D18-A4BC-4E43A8A42C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F116C5-EBF9-4D18-A4BC-4E43A8A42C89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94D72CCC-07FD-46F3-9548-8807DD088FE5}
 	EndGlobalSection
 EndGlobal

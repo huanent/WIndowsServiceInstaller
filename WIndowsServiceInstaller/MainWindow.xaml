@@ -1,13 +1,22 @@
-﻿<Window x:Class="WIndowsServiceInstaller.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WIndowsServiceInstaller"
-        mc:Ignorable="d" Height="160" Width="200" ResizeMode="CanMinimize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow">
+        xmlns:Conventers="clr-namespace:WIndowsServiceInstaller.Conventers" x:Name="window" x:Class="WIndowsServiceInstaller.MainWindow"
+        mc:Ignorable="d" Height="222.13" Width="238.192" ResizeMode="CanMinimize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Conventers:ReverseConventer x:Key="ReverseConventer"/>
+    </Window.Resources>
     <Grid>
-        <Button x:Name="btnInstall" Content="安装服务" Margin="10,10,10,0" VerticalAlignment="Top" Height="49" HorizontalContentAlignment="Center" Click="btnInstall_Click"/>
-        <Button x:Name="btnUninstall" Content="卸载服务" Margin="10,64,10,0" VerticalAlignment="Top" Height="49" Click="btnUninstall_Click"/>
+        <Button  Content="安装服务" Margin="10,10,10,0" VerticalAlignment="Top" Height="35" HorizontalContentAlignment="Center" Click="btnInstall_Click" IsEnabled="{Binding InstallStatus, Converter={StaticResource ReverseConventer}, ElementName=window}"/>
+        <Button  Content="卸载服务" Margin="10,50,9.667,0" VerticalAlignment="Top" Height="35" Click="btnUninstall_Click" IsEnabled="{Binding InstallStatus, ElementName=window}"/>
+        <Label Content="服务名称：" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top"/>
+        <Label Content="服务状态：" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top"/>
+        <Label Content="{Binding ServiceName, ElementName=window}" HorizontalAlignment="Left" Margin="85,129,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.506,-0.714"/>
+        <Label Content="{Binding ServiceStatusContent, ElementName=window}" HorizontalAlignment="Left" Margin="85,160,0,0" VerticalAlignment="Top"/>
+        <Button  Content="打开程序根目录" Margin="10,90,9.667,0" VerticalAlignment="Top" Height="35" Click="OpenRootDir"/>
 
     </Grid>
 </Window>
