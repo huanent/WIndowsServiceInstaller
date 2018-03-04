@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WIndowsServiceInstaller"
         xmlns:Conventers="clr-namespace:WIndowsServiceInstaller.Conventers" x:Name="window" x:Class="WIndowsServiceInstaller.MainWindow"
-        mc:Ignorable="d" Height="222.13" Width="238.192" ResizeMode="CanMinimize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" Loaded="Window_Loaded">
+        mc:Ignorable="d" Height="222.13" Width="238.192" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" Loaded="Window_Loaded">
     <Window.Resources>
         <Conventers:ReverseConventer x:Key="ReverseConventer"/>
     </Window.Resources>
